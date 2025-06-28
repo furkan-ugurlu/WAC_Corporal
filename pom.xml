@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.Savarona</groupId>
 	<artifactId>WAC_Corporal</artifactId>
@@ -83,7 +83,6 @@
 			<artifactId>firebase-admin</artifactId>
 			<version>9.2.0</version>
 		</dependency>
-
 		<!-- Validation -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

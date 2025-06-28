@@ -1,3 +1,4 @@
+
 package com.Savarona.config;
 
 import com.google.auth.oauth2.GoogleCredentials;
@@ -15,10 +16,11 @@ public class FirebaseConfig {
     @PostConstruct
     public void initialize() {
         try {
-            ClassPathResource serviceAccount = new ClassPathResource("FireBase_Acces_Key.json"); // Find That Path On That Project
+            ClassPathResource serviceAccount = new ClassPathResource("firebase_token.json");
 
             FirebaseOptions options = FirebaseOptions.builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount.getInputStream()))
+                    .setProjectId("waccorporal-d1e1f")  // Taken project_id from JSON ID
                     .build();
 
             if (FirebaseApp.getApps().isEmpty()) {

@@ -13,24 +13,24 @@ public class FirebaseTestController {
     public String checkFirebaseStatus() {
         try {
             if (FirebaseApp.getApps().isEmpty()) {
-                return "❌ Firebase BAĞLANAMADI - Uygulama bulunamadı";
+                return "❌ Firebase CONNECTION FAILED - Application not found";
             }
 
             FirebaseApp defaultApp = FirebaseApp.getInstance();
             String projectId = defaultApp.getOptions().getProjectId();
 
-            return "✅ Firebase BAŞARIYLA BAĞLANDI!" +
+            return "✅ Firebase SUCCESSFULLY CONNECTED!" +
                     "<br>Project ID: " + projectId +
                     "<br>App Name: " + defaultApp.getName() +
-                    "<br>Durum: Aktif";
+                    "<br>Status: Active";
 
         } catch (Exception e) {
-            return "❌ Firebase HATASI: " + e.getMessage();
+            return "❌ Firebase ERROR: " + e.getMessage();
         }
     }
 
     @GetMapping("/simple-test")
     public String simpleTest() {
-        return "🚀 Spring Boot çalışıyor! Firebase test için /api/test/firebase-status adresini ziyaret edin.";
+        return "🚀 Spring Boot is running! Visit /api/test/firebase-status for Firebase testing.";
     }
 }
