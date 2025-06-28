@@ -56,7 +56,6 @@ WAC_Corporal is a backend application developed in **Java**. The main purpose is
 
 ## 🧹 Clean Code & Best Practices
 
-- Unnecessary files and configs (like `.DS_Store` or unused templates) have been removed.
 - Sensitive data (such as secrets or API keys) are never committed.
 - `.gitignore` is kept up-to-date for a tidy repo.
 
