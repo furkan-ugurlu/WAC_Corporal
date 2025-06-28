@@ -36,3 +36,5 @@ build/
 FireBase_Acces_Key.json
 src/main/resources/FireBase_Acces_Key.json
 **/FireBase_Acces_Key*.json
+
+.DS_Store // macOS
